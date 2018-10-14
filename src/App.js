@@ -6,7 +6,7 @@ import {
 import {
   Text,
 } from './components'
-import { Colors } from './ui'
+import { Colors, Fonts } from './ui'
 
 import me from './me'
 
@@ -38,7 +38,7 @@ class App extends React.Component {
  
 const styles = {
   name: {
-    fontFamily: 'Roboto',
+    fontFamily: Fonts.header,
     fontSize: '32pt',
     marginBottom: '0.4mm',
   },
