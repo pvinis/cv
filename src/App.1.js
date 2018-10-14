@@ -73,25 +73,6 @@ class App extends Component {
   render() {
     return (
       <div>
-        <View centered style={{
-          // marginTop: '-0.2cm', // added by me
-          marginBottom: '0.4mm',
-        }}>
-          <Text style={{ color: Colors.accent, fontFamily: Fonts.body, fontSize: '7.6pt', fontVariant: 'small-caps' }}>
-            {me.position}
-          </Text>
-        </View>
-        <View centered
-          style={{
-            // marginTop: '-0.15cm', // added by me
-            // marginBottom: '-0.5mm',
-            marginBottom: '0.2cm', // added by me
-          }}
-        >
-          <Text style={{ color: Colors.lightGrey, fontSize: '8pt', fontStyle: 'italic', fontWeight: 300}}>
-            {me.location}
-          </Text>
-        </View>
         <ContactList list={contactInfo} />
         <View centered style={{ marginBottom: '5mm' }}>
           <Text style={{ color: Colors.darkText, fontSize: '9pt', fontStyle: 'italic', fontWeight: 300, fontFamily: Fonts.body }}>

@@ -145,47 +145,12 @@
 \definecolor{awesome-darknight}{HTML}{131A28}
 \colorlet{awesome}{awesome-red}
 
-% Boolean value to switch section color highlighting
-\newbool{acvSectionColorHighlight}
-\setbool{acvSectionColorHighlight}{true}
-
-% Awesome section color
-\def\@sectioncolor#1#2#3{%
-  \ifbool{acvSectionColorHighlight}{{\color{awesome}#1#2#3}}{#1#2#3}%
-}
-
-
-%-------------------------------------------------------------------------------
-%                Configuration for fonts
-%-------------------------------------------------------------------------------
-% Set font for header (default is Roboto)
-\newfontfamily\headerfont[
-%  Path=\@fontdir,
-  UprightFont=*-Regular,
-  ItalicFont=*-Italic,
-  BoldFont=*-Bold,
-  BoldItalicFont=*-BoldItalic,
-]{Roboto}
-
-\newfontfamily\headerfontlight[
-%  Path=\@fontdir,
-  UprightFont=*-Thin,
-  ItalicFont=*-ThinItalic,
-  BoldFont=*-Medium,
-  BoldItalicFont=*-MediumItalic,
-]{Roboto}
-
-\newcommand*{\footerfont}{\sourcesanspro}
-\newcommand*{\bodyfont}{\sourcesanspro}
-\newcommand*{\bodyfontlight}{\sourcesansprolight}
 
 %-------------------------------------------------------------------------------
 %                Configuration for styles
 %-------------------------------------------------------------------------------
 % Configure styles for each CV elements
 % For fundamental structures
-\newcommand*{\headerpositionstyle}[1]{{\fontsize{7.6pt}{1em}\bodyfont\scshape\color{awesome} #1}}
-\newcommand*{\headeraddressstyle}[1]{{\fontsize{8pt}{1em}\headerfont\itshape\color{lighttext} #1}}
 \newcommand*{\headersocialstyle}[1]{{\fontsize{6.8pt}{1em}\headerfont\color{text} #1}}
 \newcommand*{\headerquotestyle}[1]{{\fontsize{9pt}{1em}\bodyfont\itshape\color{darktext} #1}}
 \newcommand*{\footerstyle}[1]{{\fontsize{8pt}{1em}\footerfont\scshape\color{lighttext} #1}}
@@ -221,32 +186,9 @@
 %-------------------------------------------------------------------------------
 %                Commands for personal information
 %-------------------------------------------------------------------------------
-% Define writer's nam
-% Usage: \name{<firstname>}{<lastname>}
-% Usage: \firstname{<firstname>}
-% Usage: \lastname{<lastname>}
-% Usage: \familyname{<familyname>}
-\newcommand*{\name}[2]{\def\@firstname{#1}\def\@lastname{#2}}
-\newcommand*{\firstname}[1]{\def\@firstname{#1}}
-\newcommand*{\lastname}[1]{\def\@lastname{#1}}
-\newcommand*{\familyname}[1]{\def\@lastname{#1}}
-\def\@familyname{\@lastname}
-
 % Define writer's address
 % Usage: \address{<address>}
 \newcommand*{\address}[1]{\def\@address{#1}}
-
-% Define writer's position
-% Usage: \name{<position>}
-\newcommand*{\position}[1]{\def\@position{#1}}
-
-% Defines writer's mobile (optional)
-% Usage: \mobile{<mobile number>}
-\newcommand*{\mobile}[1]{\def\@mobile{#1}}
-
-% Defines writer's email (optional)
-% Usage: \email{<email adress>}
-\newcommand*{\email}[1]{\def\@email{#1}}
 
 % Defines writer's homepage (optional)
 % Usage: \homepage{<url>}
@@ -297,8 +239,6 @@
 %-------------------------------------------------------------------------------
 %% Define helper macros a user can change easily
 % Header
-\newcommand{\acvHeaderAfterPositionSkip}{.4mm}
-\newcommand{\acvHeaderAfterAddressSkip}{-.5mm}
 \newcommand{\acvHeaderIconSep}{\space}
 \newcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
 \newcommand{\acvHeaderAfterSocialSkip}{6mm}
@@ -331,8 +271,6 @@
 % Usage: \makecvheader
 \newcommand*{\makecvheader}{%
   \begin{center}
-    \ifthenelse{\isundefined{\@position}}{}{\headerpositionstyle{\@position\\[\acvHeaderAfterPositionSkip]}}%
-    \ifthenelse{\isundefined{\@address}}{}{\headeraddressstyle{\@address\\[\acvHeaderAfterAddressSkip]}}%
     \headersocialstyle{%
       \newbool{isstart}%
       \setbool{isstart}{true}%
