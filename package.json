@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "puppeteer": "^1.9.0",
     "react": "^16.5.2",
     "react-art": "^16.5.2",
     "react-dom": "^16.5.2",
@@ -10,6 +11,9 @@
     "react-scripts": "2.0.4"
   },
   "scripts": {
+    "pdf": "node ./scripts/make-pdf.js",
+    "diff": "diff-pdf orig.pdf cv.pdf --output-diff diff.pdf || true",
+    "pdf-and-diff": "yarn pdf && yarn diff",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
