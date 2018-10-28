@@ -8,12 +8,15 @@ const me = {
   location: 'Rotterdam, Netherlands',
   quote: 'I enjoy experimenting with new technologies, competing in coding contests and working with like-minded people.',
   social: {
-    phone: '+31 6-2723-9822',
-    github: 'pvinis',
-    stackoverflow: { id: '377456', name: 'pvinis' },
-    gitlab: 'pvinis',
-    linkedin: 'pvinis',
-    ghuser: 'pvinis',
+    phone: { display: '+31 6-2723-9822', number: '+31627239822' },
+    github: { display: 'pvinis', username: 'pvinis' },
+    stackoverflow: { display: 'pvinis', id: '377456', name: 'pvinis' },
+    gitlab: { display: 'pvinis', username: 'pvinis' },
+    linkedin: { display: 'pvinis', username: 'pvinis' },
+    ghuser: { display: 'pvinis', username: 'pvinis' },
+    website: { display: 'pvin.is', url: 'https://pvin.is' },
+    email: {},
+    skype: { },
   },
   teachingAssistance: [
     // sections
