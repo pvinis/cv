@@ -2,6 +2,6 @@ repository:
   name: cv
   description: Pavlos Vinieratos CV
   homepage: https://pvinis.github.io/cv
-  topics: cv, Pavlos, Vinieratos, pvinis
+  topics: cv, pavlos, vinieratos, pvinis
 
 has_wiki: false
