@@ -1,0 +1,7 @@
+repository:
+  name: cv
+  description: Pavlos Vinieratos CV
+  homepage: https://pvinis.github.io/cv
+  topics: cv
+
+has_wiki: true
