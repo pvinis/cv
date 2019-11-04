@@ -4,8 +4,8 @@ import View from './View'
 import Social from './Social'
 
 export {
-  Text,
-  View,
+	Text,
+	View,
 
-  Social,
+	Social,
 }

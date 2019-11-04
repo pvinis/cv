@@ -16,7 +16,7 @@ const me = {
 		ghuser: { display: 'pvinis', username: 'pvinis' },
 		website: { display: 'pvin.is', url: 'https://pvin.is' },
 		email: {},
-		skype: { },
+		skype: { username: 'pvinis', url: 'https://join.skype.com/invite/lkiW7CesnjdE' },
 	},
 	teachingAssistance: [
 		// sections

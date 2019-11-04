@@ -11,12 +11,7 @@ import me from './me'
 
 export const App = () => {
 	return (
-		<View
-			style={{
-
-			}}
-		>
-
+		<View style={{ }} >
 			{/* header */}
 			<View
 				style={{
