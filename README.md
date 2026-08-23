@@ -1,7 +1,8 @@
 # Pavlos Vinieratos
 
-[![CV](https://img.shields.io/badge/CV-pdf-green.svg)](https://raw.githubusercontent.com/pvinis/cv/master/Pavlos-Vinieratos-CV.pdf)
+CV: [pav.gg/cv](https://pav.gg/cv)
 
-[CV](https://raw.githubusercontent.com/pvinis/cv/master/Pavlos-Vinieratos-CV.pdf)
+LaTeX source lives in `cv.tex` and `cv/`. Build it with `make` (see [BUILD.md](BUILD.md));
+the resulting PDF is a build artifact and is not committed.
 
 Based on [Awesome-CV](https://github.com/posquit0/Awesome-CV)

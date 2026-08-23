@@ -12,3 +12,7 @@
 # intermediate documents
 *.dvi
 *-converted-to.*
+
+## build artifacts
+Pavlos-Vinieratos-CV.pdf
+Pavlos-Vinieratos-CoverLetter.pdf
