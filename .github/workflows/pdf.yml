@@ -20,7 +20,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - uses: oven-sh/setup-bun@v2
         with:
@@ -29,7 +29,7 @@ jobs:
       - run: bun install --frozen-lockfile
 
       - name: Cache Playwright browsers
-        uses: actions/cache@v4
+        uses: actions/cache@v6
         with:
           path: ~/.cache/ms-playwright
           key: playwright-${{ runner.os }}-${{ hashFiles('bun.lock') }}
@@ -41,12 +41,14 @@ jobs:
 
       - name: Commit if changed
         run: |
-          if git diff --quiet -- Pavlos-Vinieratos-CV.pdf; then
+          # Stage first: `git diff` alone does not see an untracked file, so a
+          # newly created PDF would look unchanged and never get committed.
+          git add Pavlos-Vinieratos-CV.pdf
+          if git diff --cached --quiet -- Pavlos-Vinieratos-CV.pdf; then
             echo "PDF unchanged."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add Pavlos-Vinieratos-CV.pdf
           git commit -m "build: regenerate CV PDF from cv.md"
           git push
