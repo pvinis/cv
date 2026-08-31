@@ -1,0 +1,15 @@
+{
+	"name": "cv",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"pdf": "bun run build/pdf.ts",
+		"pdf:strict": "bun run build/pdf.ts --strict",
+		"pdf:from-url": "bun run build/pdf.ts --from-url"
+	},
+	"devDependencies": {
+		"@types/markdown-it": "^14.1.2",
+		"markdown-it": "^14.1.0",
+		"playwright": "^1.49.1"
+	}
+}
