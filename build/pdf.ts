@@ -12,7 +12,7 @@
 
 import { chromium } from "playwright"
 import MarkdownIt from "markdown-it"
-import { readFileSync, writeFileSync } from "node:fs"
+import { readFileSync, readdirSync, writeFileSync } from "node:fs"
 import { dirname, resolve } from "node:path"
 import { fileURLToPath } from "node:url"
 
@@ -50,13 +50,18 @@ const buildHtml = () => {
 	const raw = readFileSync(resolve(repo, "cv.md"), "utf8")
 	const { meta, body } = splitFrontmatter(raw)
 
-	const found = [...body.matchAll(PLACEHOLDER)].map((m) => m[1].trim())
+	const lineOf = (index: number) => body.slice(0, index).split("\n").length
+	const found = [...body.matchAll(PLACEHOLDER)].map((m) => ({
+		text: m[1].trim(),
+		// +1 for the frontmatter's closing `---`, so the number matches cv.md.
+		line: lineOf(m.index!) + raw.slice(0, raw.length - body.length).split("\n").length - 1,
+	}))
 	if (found.length) {
 		console.warn(`\n  ${found.length} unfilled placeholder${found.length === 1 ? "" : "s"} in cv.md:`)
-		for (const f of found) console.warn(`    ‹fill: ${f}›`)
+		for (const f of found) console.warn(`    cv.md:${f.line}  ‹fill: ${f.text}›`)
 		if (annotate) {
 			for (const f of found) {
-				console.log(`::warning file=cv.md::Unfilled placeholder: ${f}`)
+				console.log(`::warning file=cv.md,line=${f.line}::Unfilled placeholder: ${f.text}`)
 			}
 		}
 		if (strict) {
@@ -76,15 +81,31 @@ const buildHtml = () => {
 
 	const css = readFileSync(resolve(here, "print.css"), "utf8")
 
+	// Fonts are committed under build/fonts and inlined as data URIs. Google Fonts
+	// serves different binaries per platform, which made the CI render a page
+	// longer than the local one; self-hosting keeps every machine identical.
+	const faces = readdirSync(resolve(here, "fonts"))
+		.filter((f) => f.endsWith(".woff2"))
+		.map((f) => {
+			const [, weight, italic] = f.match(/-(\d+)(-italic)?\.woff2$/)!
+			const data = readFileSync(resolve(here, "fonts", f)).toString("base64")
+			return `@font-face {
+	font-family: "Source Sans 3";
+	font-style: ${italic ? "italic" : "normal"};
+	font-weight: ${weight};
+	font-display: block;
+	src: url(data:font/woff2;base64,${data}) format("woff2");
+}`
+		})
+		.join("\n")
+
 	return `<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <title>${meta.title ?? "CV"}</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
 <style>
+${faces}
 ${css}
 </style>
 </head>
@@ -109,8 +130,8 @@ if (fromUrl) {
 	await page.setContent(html, { waitUntil: "networkidle" })
 	await page.evaluate(() => document.fonts.ready)
 
-	// The webfont comes from Google Fonts. If it ever fails to load, Chrome
-	// silently falls back and the PDF reflows — better to stop than to publish it.
+	// Guards against a corrupt or missing woff2 in build/fonts: Chrome would fall
+	// back silently and reflow the PDF rather than fail.
 	const fontLoaded = await page.evaluate(() => document.fonts.check('600 1rem "Source Sans 3"'))
 	if (!fontLoaded) {
 		console.error("\n  Source Sans 3 did not load; refusing to build with a fallback font.\n")
