@@ -8,10 +8,11 @@ description: Pavlos Vinieratos - React Native & Expo consultant. Upgrades, nativ
 
 #### React Native & Expo: upgrades, native modules, and mobile platform work
 
-I wrote the tool the React Native community uses to upgrade its apps. Since 2016 I've led mobile
-at [Artsy](https://artsy.net), [Cointracker](https://www.cointracker.io), [Sense Health](https://niceday.app/en/home)
-and [mycujoo](https://web.archive.org/web/20201101040713/https://mycujoo.tv/en), most of them for
-two years or more.
+I wrote the tool the React Native community uses to upgrade its apps. Since 2016 I've built and led
+mobile at [Artsy](https://artsy.net), [Cointracker](https://www.cointracker.io), [Sense Health](https://niceday.app/en/home),
+[Squads](https://squads.xyz), [LeanScaper](https://leanscaper.com) and
+[mycujoo](https://web.archive.org/web/20201101040713/https://mycujoo.tv/en), most of them for a year
+or more.
 
 - [hello@pvinis.com](mailto:hello@pvinis.com) · [quad.codes](https://quad.codes) · [book a call](https://fantastical.app/pvinis)
 - [GitHub](https://github.com/pvinis) · [LinkedIn](https://linkedin.com/in/pvinis) · [X](https://x.com/pvinis) · [links](https://md.quad.codes/links)
@@ -41,10 +42,28 @@ app can ship a feature at all.
 CI/CD, release pipelines, design systems, dev-tools. The work that makes a mobile team faster
 every week instead of once. I led this at Artsy across every app the company shipped.
 
-### Fractional mobile lead
+### Fractional lead, and a multiplier
 
-Team of engineers, no one senior enough to own the architecture. I've led mobile teams at four
-companies and can hold that seat part-time while you hire.
+Team of engineers, no one senior enough to own the architecture. I've led mobile teams at five
+companies and can hold that seat part-time while you hire — the kind of hire that makes every
+other engineer faster.
+
+---
+
+## Open source
+
+### [upgrade-helper](https://react-native-community.github.io/upgrade-helper)
+> Creator and maintainer · 4.1k stars
+
+How the React Native community upgrades its apps. Started it in 2019, still maintaining it.
+
+### [rn-diff-purge](https://github.com/react-native-community/rn-diff-purge)
+> Creator and maintainer · 1.3k stars
+
+The diff generator behind every upgrade-helper diff. Same story: started 2019, still going.
+
+Both live under [react-native-community](https://github.com/react-native-community), where the
+React Native core team keeps its tooling.
 
 ---
 
@@ -57,8 +76,26 @@ companies and can hold that seat part-time while you hire.
 - [**browsers.party**](https://browsers.party): the most complete browser reference on the internet.
 - [**md.quad.codes**](https://md.quad.codes): markdown publishing tool. This CV is served from it.
 
+### [LeanScaper](https://leanscaper.com), Mobile Lead
+> 2025 Aug - Present · Contract
+
+- Lead the [mobile app](https://apps.apple.com/us/app/leanscaper-ai/id6754711316): a field app that
+  lets landscape crews record huddles, raise requests and get AI-powered support, closing the gap
+  between the field and the office. Shipped Jan 2026 and still shipping.
+- Built the v2 of [leanscaper.com](https://leanscaper.com) with their team, the site the platform
+  sells from.
+
+### [Fuse](https://fusewallet.com), Mobile Engineer
+> 2025 Feb - 2025 Oct · Contract
+
+- Built the [Fuse app](https://apps.apple.com/us/app/fuse-solana-smart-wallet/id6470302252) at
+  [Squads Labs](https://squads.xyz): Solana's first smart wallet, built on the Squads smart-account
+  standard.
+- **App of the Year** at the [inaugural Expo App Awards](https://expo.dev/awards), 2025, ahead of
+  Partiful and Runna.
+
 ### [Cointracker](https://www.cointracker.io), Lead Mobile Engineer
-> 2023 Mar - 2024 Mar · Contract
+> 2023 Mar - 2024 Mar · Employee
 
 - Led the mobile team and set the Expo/React Native foundation the app still runs on.
 - Rebuilt transactions and wallets to full parity with the web app, the two screens that carry
@@ -66,7 +103,7 @@ companies and can hold that seat part-time while you hire.
 - Prototyped wallet-based login, taking crypto-native auth into the mobile app.
 
 ### [Artsy](https://artsy.net), Senior Software Engineer
-> 2020 Apr - 2023 Feb · Contract · ~3 years
+> 2020 Apr - 2023 Feb · Employee · ~3 years
 
 - Led the mobile practice group: every mobile engineer across every team, ‹fill: headcount›.
 - Led the mobile build of `palette-mobile`, the design system now behind Artsy's apps.
@@ -76,7 +113,7 @@ companies and can hold that seat part-time while you hire.
 - Built Artsy's NFT auction prototype and led the internal web3 group.
 
 ### [Sense Health](https://niceday.app/en/home), Senior React Native Developer
-> 2018 Nov - 2020 Apr · Contract
+> 2018 Nov - 2020 Apr · Employee
 
 - Built [NiceDay](https://niceday.app/en/home), a mental-health platform used by clinicians and
   patients, with a mobile team of 7 across multiple countries.
@@ -84,7 +121,7 @@ companies and can hold that seat part-time while you hire.
 - Established CI/CD (Travis, fastlane, CodePush) where there had been none.
 
 ### [mycujoo](https://web.archive.org/web/20201101040713/https://mycujoo.tv/en), Lead iOS / React Native Engineer
-> 2016 Nov - 2018 Nov · Contract
+> 2016 Nov - 2018 Nov · Employee
 
 - Built the live sports broadcasting iOS app from scratch. ‹fill: streams, matches or viewers›
 - Wrote the Objective-C and Swift native modules for streaming video up and down.
@@ -92,7 +129,7 @@ companies and can hold that seat part-time while you hire.
   [conference talk](https://www.youtube.com/watch?v=4K3tV6vTIgc) I gave on it.
 
 ### [pagestrip](https://www.pagestrip.com/en), Senior macOS Engineer
-> ‹fill: dates› · Contract
+> ‹fill: dates› · Employee
 
 - Objective-C editor that replaced InDesign and Photoshop for publishing houses shipping
   daily, in print and online.
