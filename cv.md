@@ -1,7 +1,7 @@
 ---
-title: Pavlos Vinieratos - React Native & Expo Consultant
+title: Pavlos Vinieratos - Consultant, React Native & Expo Magician
 favicon: https://avatars.githubusercontent.com/u/100233?v=4
-description: Pavlos Vinieratos - React Native & Expo consultant. Upgrades, native modules, mobile platform work.
+description: Pavlos Vinieratos - Consultant, React Native & Expo magician. Upgrades, native modules, mobile platform work.
 ---
 
 # Pavlos Vinieratos
