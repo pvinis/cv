@@ -160,3 +160,5 @@ Thesis: a Linux USB device driver.
 ---
 
 *Currently taking new engagements. [Get in touch](mailto:hello@pvinis.com) or [book a call](https://fantastical.app/pvinis).*
+
+*Always the current version at [md.quad.codes](https://md.quad.codes/custom?u=https://raw.githubusercontent.com/pvinis/cv/main/cv.md) · [PDF](https://github.com/pvinis/cv/raw/main/Pavlos-Vinieratos-CV.pdf) · [source](https://github.com/pvinis/cv)*
