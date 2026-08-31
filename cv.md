@@ -42,29 +42,28 @@ app can ship a feature at all.
 CI/CD, release pipelines, design systems, dev-tools. The work that makes a mobile team faster
 every week instead of once. I led this at Artsy across every app the company shipped.
 
-### Fractional mobile lead
+### Fractional lead, and a multiplier
 
 Team of engineers, no one senior enough to own the architecture. I've led mobile teams at five
-companies and can hold that seat part-time while you hire.
+companies and can hold that seat part-time while you hire — the kind of hire that makes every
+other engineer faster.
 
 ---
 
 ## Open source
 
 ### [upgrade-helper](https://react-native-community.github.io/upgrade-helper)
-> Creator and lead maintainer · 4.1k stars · 130 forks
+> Creator and maintainer · 4.1k stars
 
-How the React Native community upgrades its apps. 196 commits, five times the next person's,
-and still shipping in 2026.
+How the React Native community upgrades its apps. Started it in 2019, still maintaining it.
 
 ### [rn-diff-purge](https://github.com/react-native-community/rn-diff-purge)
-> Creator and lead maintainer · 1.3k stars · 72 forks
+> Creator and maintainer · 1.3k stars
 
-The diff generator every upgrade-helper diff is built from. 763 commits to the next
-contributor's 17.
+The diff generator behind every upgrade-helper diff. Same story: started 2019, still going.
 
-Both live under [react-native-community](https://github.com/react-native-community), the org the
-React Native core team keeps its tooling in.
+Both live under [react-native-community](https://github.com/react-native-community), where the
+React Native core team keeps its tooling.
 
 ---
 
@@ -87,7 +86,7 @@ React Native core team keeps its tooling in.
   sells from.
 
 ### [Fuse](https://fusewallet.com), Mobile Engineer
-> 2025 Feb - 2025 Oct · Contract
+> 2025 Feb - 2025 Oct · Contract · 8 months
 
 - Built the [Fuse app](https://apps.apple.com/us/app/fuse-solana-smart-wallet/id6470302252) at
   [Squads Labs](https://squads.xyz): Solana's first smart wallet, built on the Squads smart-account
@@ -96,7 +95,7 @@ React Native core team keeps its tooling in.
   Partiful and Runna.
 
 ### [Cointracker](https://www.cointracker.io), Lead Mobile Engineer
-> 2023 Mar - 2024 Mar · Employee
+> 2023 Mar - 2024 Mar · Employee · 1 year
 
 - Led the mobile team and set the Expo/React Native foundation the app still runs on.
 - Rebuilt transactions and wallets to full parity with the web app, the two screens that carry
@@ -113,7 +112,7 @@ React Native core team keeps its tooling in.
 - Built Artsy's NFT auction prototype and led the internal web3 group.
 
 ### [Sense Health](https://niceday.app/en/home), Senior React Native Developer
-> 2018 Nov - 2020 Apr · Employee
+> 2018 Nov - 2020 Apr · Employee · ~1.5 years
 
 - Built [NiceDay](https://niceday.app/en/home), a mental-health platform used by clinicians and
   patients, with a mobile team of 7 across multiple countries.
@@ -121,7 +120,7 @@ React Native core team keeps its tooling in.
 - Established CI/CD (Travis, fastlane, CodePush) where there had been none.
 
 ### [mycujoo](https://web.archive.org/web/20201101040713/https://mycujoo.tv/en), Lead iOS / React Native Engineer
-> 2016 Nov - 2018 Nov · Employee
+> 2016 Nov - 2018 Nov · Employee · 2 years
 
 - Built the live sports broadcasting iOS app from scratch.
 - Wrote the Objective-C and Swift native modules for streaming video up and down.
@@ -129,7 +128,7 @@ React Native core team keeps its tooling in.
   [conference talk](https://www.youtube.com/watch?v=4K3tV6vTIgc) I gave on it.
 
 ### [pagestrip](https://www.pagestrip.com/en), Senior macOS Engineer
-> Employee
+> 2014 Mar - 2016 Nov · Employee · ~2.5 years
 
 - Objective-C editor that replaced InDesign and Photoshop for publishing houses shipping
   daily, in print and online.
