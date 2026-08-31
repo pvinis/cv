@@ -108,6 +108,14 @@ if (fromUrl) {
 	if (flag("html")) writeFileSync(resolve(repo, "build/out/cv.html"), html)
 	await page.setContent(html, { waitUntil: "networkidle" })
 	await page.evaluate(() => document.fonts.ready)
+
+	// The webfont comes from Google Fonts. If it ever fails to load, Chrome
+	// silently falls back and the PDF reflows — better to stop than to publish it.
+	const fontLoaded = await page.evaluate(() => document.fonts.check('600 1rem "Source Sans 3"'))
+	if (!fontLoaded) {
+		console.error("\n  Source Sans 3 did not load; refusing to build with a fallback font.\n")
+		process.exit(1)
+	}
 }
 
 await page.pdf({
